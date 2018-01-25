@@ -1,6 +1,7 @@
 {% set name = "google-api-core" %}
-{% set version = "0.1.1" %}
-{% set sha256 = "7deffb08c6afa4b6e60fa28d805cfe0909a506930d038bae8422da86a9667e64" %}
+{% set version = "0.1.4" %}
+{% set sha256 = "0144d467083ed54d2e8ccb4212d42c3724fe0b844b7d3a0ff85aea54b7ae8347" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +9,12 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  noarch: python
+  number: {{ build }}
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -28,6 +30,7 @@ requirements:
     - requests >=2.18.0,<3.0.0dev
     - setuptools >=34.0.0
     - six >=1.10.0
+    - pytz
     # Backport of concurrent.futures for Python < 3.2.
     - futures >=3.0.0  # [py2k]
 
