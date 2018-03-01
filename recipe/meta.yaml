@@ -1,6 +1,6 @@
 {% set name = "google-api-core" %}
-{% set version = "0.1.4" %}
-{% set sha256 = "0144d467083ed54d2e8ccb4212d42c3724fe0b844b7d3a0ff85aea54b7ae8347" %}
+{% set version = "1.0.0" %}
+{% set sha256 = "74e11737212e922ce9623b73f714eefe0c9cb18b1f49ce1424aac970f741df8e" %}
 {% set build = 0 %}
 
 package:
@@ -14,7 +14,7 @@ source:
 
 build:
   noarch: python
-  number: {{ build }}
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
