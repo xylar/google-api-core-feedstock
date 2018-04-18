@@ -14,12 +14,15 @@ This library is not meant to stand-alone. Instead it defines common helpers used
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/google-api-core-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/google-api-core-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/google-api-core-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/google-api-core-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/google-api-core/badges/version.svg)](https://anaconda.org/conda-forge/google-api-core)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/google-api-core/badges/downloads.svg)](https://anaconda.org/conda-forge/google-api-core)
+[![Conda Recipe](https://img.shields.io/badge/recipe-google--api--core-green.svg)](https://anaconda.org/conda-forge/google-api-core)
+[![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/google-api-core.svg)](https://anaconda.org/conda-forge/google-api-core)
+[![Conda Version](https://img.shields.io/conda/vn/conda-forge/google-api-core.svg)](https://anaconda.org/conda-forge/google-api-core)
+[![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/google-api-core.svg)](https://anaconda.org/conda-forge/google-api-core)
 
 Installing google-api-core
 ==========================
