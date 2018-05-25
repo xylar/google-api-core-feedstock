@@ -19,10 +19,10 @@ All platforms:
 
 Current release info
 ====================
-[![Conda Recipe](https://img.shields.io/badge/recipe-google--api--core-green.svg)](https://anaconda.org/conda-forge/google-api-core)
-[![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/google-api-core.svg)](https://anaconda.org/conda-forge/google-api-core)
-[![Conda Version](https://img.shields.io/conda/vn/conda-forge/google-api-core.svg)](https://anaconda.org/conda-forge/google-api-core)
-[![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/google-api-core.svg)](https://anaconda.org/conda-forge/google-api-core)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-google--api--core-green.svg)](https://anaconda.org/conda-forge/google-api-core) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/google-api-core.svg)](https://anaconda.org/conda-forge/google-api-core) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/google-api-core.svg)](https://anaconda.org/conda-forge/google-api-core) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/google-api-core.svg)](https://anaconda.org/conda-forge/google-api-core) |
 
 Installing google-api-core
 ==========================
