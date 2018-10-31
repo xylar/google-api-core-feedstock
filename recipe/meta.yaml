@@ -1,6 +1,6 @@
 {% set name = "google-api-core" %}
-{% set version = "1.5.0" %}
-{% set sha256 = "034215fd86972dd329b979a6acb89fb60fa0aaaf0ea4730401effde3b7aab19b" %}
+{% set version = "1.5.1" %}
+{% set sha256 = "7cf597628cb9c5ceb24834b30a325dc271d3ba15d868d81c20aa80a77e13be65" %}
 {% set build = 0 %}
 
 package:
@@ -26,7 +26,7 @@ requirements:
   run:
     - python
     - googleapis-common-protos >=1.5.3,<2.0dev
-    - protobuf >=3.0.0
+    - protobuf >=3.4.0
     - google-auth >=0.4.0,<2.0.0dev
     - requests >=2.18.0,<3.0.0dev
     - setuptools >=34.0.0
