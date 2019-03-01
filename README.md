@@ -1,7 +1,9 @@
+<!--
+# -*- mode: jinja -*-
+-->
+
 About google-api-core
 =====================
-
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
 
 Home: https://github.com/GoogleCloudPlatform/google-cloud-python/tree/master/core
 
@@ -16,8 +18,9 @@ This library is not meant to stand-alone. Instead it defines common helpers used
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/google-api-core-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/google-api-core-feedstock)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/google-api-core-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/google-api-core-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/google-api-core-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/google-api-core-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/google-api-core-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/google-api-core-feedstock/branch/master)
 
 Current release info
 ====================
@@ -50,6 +53,8 @@ conda search google-api-core --channel conda-forge
 
 About conda-forge
 =================
+
+[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the

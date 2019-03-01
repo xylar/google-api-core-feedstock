@@ -1,6 +1,6 @@
 {% set name = "google-api-core" %}
-{% set version = "1.7.0" %}
-{% set sha256 = "85693e163a1a6faea69a74f8feaf35d54dfa2559fbdbbe389c93ffb3bb4c9a79" %}
+{% set version = "1.8.0" %}
+{% set sha256 = "3157625b4f4f033650c6e674d52fd8a3a8c116b26b39705cddf4ed61621c09ff" %}
 {% set build = 0 %}
 
 package:
@@ -13,7 +13,6 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  noarch: python
   number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
