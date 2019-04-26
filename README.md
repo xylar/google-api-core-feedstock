@@ -1,15 +1,31 @@
-About google-api-core
-=====================
+About google-api-core-split
+===========================
 
 Home: https://github.com/GoogleCloudPlatform/google-cloud-python/tree/master/core
 
-Package license: Apache-2.0
+Package license: Apache 2.0
 
 Feedstock license: BSD 3-Clause
 
 Summary: Core Library for Google Client Libraries
 
-This library is not meant to stand-alone. Instead it defines common helpers used by all Google API clients.
+Core Library for Google Client Libraries
+-------------------------
+
+This package does not include the grpc, grpcio-gcp or grpcgcp extra requirements.
+
+This library is not meant to stand-alone. Instead it defines
+common helpers used by all Google API clients. For more information, see the
+[documentation](https://googleapis.github.io/google-cloud-python/latest/core/).
+
+Supported Python Versions
+-------------------------
+Python >= 3.5
+
+Deprecated Python Versions
+--------------------------
+Python == 2.7. Python 2.7 support will be removed on January 1, 2020.
+
 
 Current build status
 ====================
@@ -78,24 +94,17 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win_python2.7</td>
+              <td>win_python3.6vc14</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5003&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/google-api-core-feedstock?branchName=master&jobName=win&configuration=win_python2.7" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/google-api-core-feedstock?branchName=master&jobName=win&configuration=win_python3.6vc14" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_python3.6</td>
+              <td>win_python3.7vc14</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5003&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/google-api-core-feedstock?branchName=master&jobName=win&configuration=win_python3.6" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_python3.7</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5003&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/google-api-core-feedstock?branchName=master&jobName=win&configuration=win_python3.7" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/google-api-core-feedstock?branchName=master&jobName=win&configuration=win_python3.7vc14" alt="variant">
                 </a>
               </td>
             </tr>
@@ -104,6 +113,7 @@ Current build status
       </details>
     </td>
   </tr>
+![ppc64le disabled](https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg)
 </table>
 
 Current release info
@@ -112,20 +122,23 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-google--api--core-green.svg)](https://anaconda.org/conda-forge/google-api-core) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/google-api-core.svg)](https://anaconda.org/conda-forge/google-api-core) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/google-api-core.svg)](https://anaconda.org/conda-forge/google-api-core) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/google-api-core.svg)](https://anaconda.org/conda-forge/google-api-core) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-google--api--core--grpc-green.svg)](https://anaconda.org/conda-forge/google-api-core-grpc) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/google-api-core-grpc.svg)](https://anaconda.org/conda-forge/google-api-core-grpc) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/google-api-core-grpc.svg)](https://anaconda.org/conda-forge/google-api-core-grpc) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/google-api-core-grpc.svg)](https://anaconda.org/conda-forge/google-api-core-grpc) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-google--api--core--grpcgcp-green.svg)](https://anaconda.org/conda-forge/google-api-core-grpcgcp) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/google-api-core-grpcgcp.svg)](https://anaconda.org/conda-forge/google-api-core-grpcgcp) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/google-api-core-grpcgcp.svg)](https://anaconda.org/conda-forge/google-api-core-grpcgcp) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/google-api-core-grpcgcp.svg)](https://anaconda.org/conda-forge/google-api-core-grpcgcp) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-google--api--core--grpcio--gcp-green.svg)](https://anaconda.org/conda-forge/google-api-core-grpcio-gcp) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/google-api-core-grpcio-gcp.svg)](https://anaconda.org/conda-forge/google-api-core-grpcio-gcp) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/google-api-core-grpcio-gcp.svg)](https://anaconda.org/conda-forge/google-api-core-grpcio-gcp) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/google-api-core-grpcio-gcp.svg)](https://anaconda.org/conda-forge/google-api-core-grpcio-gcp) |
 
-Installing google-api-core
-==========================
+Installing google-api-core-split
+================================
 
-Installing `google-api-core` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `google-api-core-split` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 ```
 
-Once the `conda-forge` channel has been enabled, `google-api-core` can be installed with:
+Once the `conda-forge` channel has been enabled, `google-api-core, google-api-core-grpc, google-api-core-grpcgcp, google-api-core-grpcio-gcp` can be installed with:
 
 ```
-conda install google-api-core
+conda install google-api-core google-api-core-grpc google-api-core-grpcgcp google-api-core-grpcio-gcp
 ```
 
 It is possible to list all of the versions of `google-api-core` available on your platform with:
@@ -173,17 +186,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating google-api-core-feedstock
-==================================
+Updating google-api-core-split-feedstock
+========================================
 
-If you would like to improve the google-api-core recipe or build a new
+If you would like to improve the google-api-core-split recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/google-api-core-feedstock are
+Note that all branches in the conda-forge/google-api-core-split-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
@@ -198,6 +211,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@BrentDorsey](https://github.com/BrentDorsey/)
 * [@parthea](https://github.com/parthea/)
 * [@tswast](https://github.com/tswast/)
 
