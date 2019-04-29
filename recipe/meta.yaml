@@ -1,6 +1,6 @@
 {% set name = "google-api-core" %}
-  {% set version = "1.9.0" %}
-  {% set sha256 = "fc1fea74bd863fb71486066e0c6b3a4dad26fb70ec61a0edcada8637feb77c68" %}
+{% set version = "1.9.0" %}
+{% set sha256 = "fc1fea74bd863fb71486066e0c6b3a4dad26fb70ec61a0edcada8637feb77c68" %}
 
 package:
   name: {{ name|lower }}-split
@@ -11,25 +11,25 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win and vc<14]
 
 requirements:
   host:
-    - python >=2.7
+    - python
     - pip >=18.1
     - setuptools >=34.0.0
 
 outputs:
   - name: {{ name }}
     build:
-      script: "{{ PYTHON }} -m pip install . --no-deps  --ignore-installed --verbose"
+      script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --verbose"
       skip: True  # [win and vc<14]
     requirements:
       host:
         - python
         - pip >=18.1
-        - futures >=3.2.0  # [py2k]
+        - futures >=3.2.0  # [py27]
         - google-auth >=0.4.0,<2.0.0dev
         - googleapis-common-protos >=1.5.3,<2.0dev
         - pytz >=2019.1
@@ -37,14 +37,14 @@ outputs:
         - setuptools >=34.0.0
         - six >=1.10.0
       run:
-        - {{ pin_compatible('python') }}
-        - {{ pin_compatible('futures') }}  # [py2k]
-        - {{ pin_compatible('google-auth') }}
-        - {{ pin_compatible('googleapis-common-protos') }}
-        - {{ pin_compatible('pytz') }}
-        - {{ pin_compatible('requests') }}
-        - {{ pin_compatible('setuptools') }}
-        - {{ pin_compatible('six') }}
+        - python
+        - futures  # [py27]
+        - google-auth
+        - googleapis-common-protos
+        - pytz
+        - requests
+        - setuptools
+        - six
     test:
       imports:
         - concurrent.futures
@@ -82,7 +82,7 @@ outputs:
         - grpcio >=1.8.2
       run:
         - {{ pin_subpackage(name, min_pin='x.x', max_pin='x.x') }}
-        - {{ pin_compatible('grpcio') }}
+        - grpcio
     test:
       imports:
         - concurrent.futures
@@ -139,7 +139,9 @@ outputs:
 
         Deprecated Python Versions
         --------------------------
-        Python == 2.7. Python 2.7 support will be removed on January 1, 2020.
+        Python == 2.7
+        - Python 2.7 support will be removed on January 1, 2020.
+        - protobuf does not support Visual C++ 2008, windows py27 package not available
 
       doc_url: https://googlecloudplatform.github.io/google-cloud-python/latest/core/
       dev_url: https://github.com/GoogleCloudPlatform/google-cloud-python/tree/master/api_core
@@ -153,7 +155,7 @@ outputs:
         - grpcio-gcp >=0.2.2
       run:
         - {{ pin_subpackage(name, min_pin='x.x', max_pin='x.x') }}
-        - {{ pin_compatible('grpcio-gcp') }}
+        - grpcio-gcp
     test:
       imports:
         - concurrent.futures
@@ -212,7 +214,9 @@ outputs:
 
         Deprecated Python Versions
         --------------------------
-        Python == 2.7. Python 2.7 support will be removed on January 1, 2020.
+        Python == 2.7
+        - Python 2.7 support will be removed on January 1, 2020.
+        - protobuf does not support Visual C++ 2008, windows py27 package not available
 
       doc_url: https://googlecloudplatform.github.io/google-cloud-python/latest/core/
       dev_url: https://github.com/GoogleCloudPlatform/google-cloud-python/tree/master/api_core
@@ -283,7 +287,9 @@ outputs:
 
         Deprecated Python Versions
         --------------------------
-        Python == 2.7. Python 2.7 support will be removed on January 1, 2020.
+        Python == 2.7
+        - Python 2.7 support will be removed on January 1, 2020.
+        - protobuf does not support Visual C++ 2008, windows py27 package not available
 
       doc_url: https://googlecloudplatform.github.io/google-cloud-python/latest/core/
       dev_url: https://github.com/GoogleCloudPlatform/google-cloud-python/tree/master/api_core
@@ -309,7 +315,9 @@ about:
 
     Deprecated Python Versions
     --------------------------
-    Python == 2.7. Python 2.7 support will be removed on January 1, 2020.
+    Python == 2.7
+    - Python 2.7 support will be removed on January 1, 2020.
+    - protobuf does not support Visual C++ 2008, windows py27 package not available
 
   doc_url: https://googlecloudplatform.github.io/google-cloud-python/latest/core/
   dev_url: https://github.com/GoogleCloudPlatform/google-cloud-python/tree/master/api_core
