@@ -1,6 +1,6 @@
 {% set name = "google-api-core" %}
-{% set version = "1.13.0" %}
-{% set sha256 = "f45d74aef41e1de49ceadebf382e1291ddcbe431a8b533aff8a1140a35531465" %}
+{% set version = "1.14.0" %}
+{% set sha256 = "ae9e76295a268e27a829a752cc2d0e58a529daeecf9be8ff7a981f0325452671" %}
 
 package:
   name: {{ name|lower }}-split
@@ -298,6 +298,7 @@ about:
   home: https://github.com/GoogleCloudPlatform/google-cloud-python/tree/master/core
   license: Apache 2.0
   license_family: APACHE
+  license_file: LICENSE
   summary: 'Core Library for Google Client Libraries'
   description: |
     Core Library for Google Client Libraries
