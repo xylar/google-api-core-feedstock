@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win and vc<14]
 
 requirements:
@@ -31,7 +31,7 @@ outputs:
         - pip >=18.1
         - futures >=3.2.0  # [py27]
         - google-auth >=0.4.0,<2.0.0dev
-        - googleapis-common-protos >=1.5.3,<2.0dev
+        - googleapis-common-protos >=1.6.0,<2.0dev
         - pytz >=2019.1
         - requests >=2.18.0,<3.0.0dev
         - setuptools >=34.0.0
