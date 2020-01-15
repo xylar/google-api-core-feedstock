@@ -1,7 +1,7 @@
 About google-api-core-split
 ===========================
 
-Home: https://github.com/GoogleCloudPlatform/google-cloud-python/tree/master/core
+Home: https://github.com/googleapis/google-cloud-python/tree/master/api_core
 
 Package license: Apache 2.0
 
@@ -16,7 +16,7 @@ This package does not include the grpc, grpcio-gcp or grpcgcp extra requirements
 
 This library is not meant to stand-alone. Instead it defines
 common helpers used by all Google API clients. For more information, see the
-[documentation](https://googleapis.github.io/google-cloud-python/latest/core/).
+[documentation](https://googleapis.dev/python/google-api-core/latest/index.html).
 
 Supported Python Versions
 -------------------------
@@ -233,6 +233,7 @@ Feedstock Maintainers
 =====================
 
 * [@BrentDorsey](https://github.com/BrentDorsey/)
+* [@leahecole](https://github.com/leahecole/)
 * [@parthea](https://github.com/parthea/)
 * [@tswast](https://github.com/tswast/)
 
