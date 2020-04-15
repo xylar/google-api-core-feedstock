@@ -1,6 +1,6 @@
 {% set name = "google-api-core" %}
-{% set version = "1.16.0" %}
-{% set sha256 = "92e962a087f1c4b8d1c5c88ade1c1dfd550047dcffb320c57ef6a534a20403e2" %}
+{% set version = "1.17.0" %}
+{% set sha256 = "e4082a0b479dc2dee2f8d7b80ea8b5d0184885b773caab15ab1836277a01d689" %}
 
 package:
   name: {{ name|lower }}-split
@@ -11,8 +11,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
-  skip: True  # [win and vc<14]
+  number: 0
+  skip: true  # [win and vc<14]
 
 requirements:
   host:
@@ -23,8 +23,8 @@ requirements:
 outputs:
   - name: {{ name }}
     build:
-      script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --verbose"
-      skip: True  # [win and vc<14]
+      script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --verbose
+      skip: true  # [win and vc<14]
     requirements:
       host:
         - python
@@ -33,7 +33,7 @@ outputs:
       run:
         - python
         - futures >=3.2.0  # [py27]
-        - google-auth >=0.4.0,<2.0.0dev
+        - google-auth >=1.14.0,<2.0.0dev
         - googleapis-common-protos >=1.6.0,<2.0dev
         - protobuf >=3.4.0
         - pytz
@@ -70,11 +70,11 @@ outputs:
 
   - name: {{ name }}-grpc
     build:
-      skip: True  # [win and vc<14]
+      skip: true  # [win and vc<14]
     requirements:
       host:
         - python
-        - grpcio >=1.8.2
+        - grpcio >=1.8.2,<2.0dev
       run:
         - {{ pin_subpackage(name, min_pin='x.x', max_pin='x.x') }}
         - grpcio >=1.8.2
@@ -114,10 +114,10 @@ outputs:
         - six.moves
         - six.moves.urllib.parse
     about:
-      home: https://github.com/googleapis/google-cloud-python/tree/master/api_core
-      license: Apache 2.0
+      home: https://github.com/googleapis/python-api-core
+      license: Apache-2.0
       license_family: APACHE
-      summary: 'Core Library for Google Client Libraries with grpc'
+      summary: Core Library for Google Client Libraries with grpc
       description: |
         Core Library for Google Client Libraries with grpc
         -------------------------
@@ -139,11 +139,11 @@ outputs:
         - protobuf does not support Visual C++ 2008, windows py27 package not available
 
       doc_url: https://googleapis.dev/python/google-api-core/latest/index.html
-      dev_url: https://github.com/googleapis/google-cloud-python/tree/master/api_core
+      dev_url: https://github.com/googleapis/python-api-core
 
   - name: {{ name }}-grpcio-gcp
     build:
-      skip: True  # [win and vc<14]
+      skip: true  # [win and vc<14]
     requirements:
       host:
         - python
@@ -188,10 +188,10 @@ outputs:
         - six.moves
         - six.moves.urllib.parse
     about:
-      home: https://github.com/googleapis/google-cloud-python/tree/master/api_core
+      home: https://github.com/googleapis/python-api-core
       license: Apache 2.0
       license_family: APACHE
-      summary: 'Core Library for Google Client Libraries with grpcio-gcp'
+      summary: Core Library for Google Client Libraries with grpcio-gcp
       description: |
         Core Library for Google Client Libraries with grpcio-gcp
         -------------------------
@@ -214,11 +214,11 @@ outputs:
         - protobuf does not support Visual C++ 2008, windows py27 package not available
 
       doc_url: https://googleapis.dev/python/google-api-core/latest/index.html
-      dev_url: https://github.com/googleapis/google-cloud-python/tree/master/api_core
+      dev_url: https://github.com/googleapis/python-api-core
 
   - name: {{ name }}-grpcgcp
     build:
-      skip: True  # [win and vc<14]
+      skip: true  # [win and vc<14]
     requirements:
       host:
         - python
@@ -261,10 +261,10 @@ outputs:
         - six.moves
         - six.moves.urllib.parse
     about:
-      home: https://github.com/googleapis/google-cloud-python/tree/master/api_core
-      license: Apache 2.0
+      home: https://github.com/googleapis/python-api-core
+      license: Apache-2.0
       license_family: APACHE
-      summary: 'Core Library for Google Client Libraries with grpcio-gcp'
+      summary: Core Library for Google Client Libraries with grpcio-gcp
       description: |
         Core Library for Google Client Libraries with grpcgcp
         -------------------------
@@ -287,14 +287,14 @@ outputs:
         - protobuf does not support Visual C++ 2008, windows py27 package not available
 
       doc_url: https://googleapis.dev/python/google-api-core/latest/index.html
-      dev_url: https://github.com/googleapis/google-cloud-python/tree/master/api_core
+      dev_url: https://github.com/googleapis/python-api-core
 
 about:
-  home: https://github.com/googleapis/google-cloud-python/tree/master/api_core
-  license: Apache 2.0
+  home: https://github.com/googleapis/python-api-core
+  license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
-  summary: 'Core Library for Google Client Libraries'
+  summary: Core Library for Google Client Libraries
   description: |
     Core Library for Google Client Libraries
     -------------------------
@@ -316,7 +316,7 @@ about:
     - protobuf does not support Visual C++ 2008, windows py27 package not available
 
   doc_url: https://googleapis.dev/python/google-api-core/latest/index.html
-  dev_url: https://github.com/googleapis/google-cloud-python/tree/master/api_core
+  dev_url: https://github.com/googleapis/python-api-core
 
 extra:
   recipe-maintainers:
