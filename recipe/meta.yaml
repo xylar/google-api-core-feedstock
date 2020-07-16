@@ -1,5 +1,5 @@
 {% set name = "google-api-core" %}
-{% set version = "1.20.0" %}
+{% set version = "1.20.1" %}
 
 package:
   name: {{ name|lower }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: eec2c302b50e6db0c713fb84b71b8d75cfad5dc6d4dffc78e9f69ba0008f5ede
+  sha256: 6b757736bbc699db858794e9b71e2bbf17996075773a40551ef5e6b0fad2a2f9
 
 build:
   number: 0
@@ -30,12 +30,15 @@ outputs:
         - python
         - google-auth >=1.14.0,<2.0dev
         - googleapis-common-protos >=1.6.0,<2.0dev
-        - protobuf >=3.4.0
+        - protobuf >=3.12.0
         - pytz
         - requests >=2.18.0,<3.0.0dev
         - setuptools >=34.0.0
         - six >=1.10.0
     test:
+      requires:
+        - python
+        - pip
       imports:
         - google.auth
         - google.auth.credentials
@@ -54,18 +57,25 @@ outputs:
         - google.api_core.protobuf_helpers
         - google.api_core.retry
         - google.api_core.timeout
+      commands:
+        - python -m pip check
 
   - name: {{ name }}-grpc
     requirements:
       host:
         - python
-        - grpcio >=1.8.2,<2.0dev
+        - grpcio >=1.29.0,<2.0dev
       run:
         - {{ pin_subpackage(name, min_pin='x.x', max_pin='x.x') }}
-        - grpcio >=1.8.2
+        - grpcio >=1.29.0
     test:
+      requires:
+        - python
+        - pip
       imports:
         - google.api_core
+      commands:
+        - python -m pip check
     about:
       home: https://github.com/googleapis/python-api-core
       license: Apache-2.0
@@ -81,12 +91,17 @@ outputs:
         - {{ pin_subpackage(name, min_pin='x.x', max_pin='x.x') }}
         - grpcio-gcp
     test:
+      requires:
+        - python
+        - pip
       imports:
         - google.api_core
         - grpc
+      commands:
+        - python -m pip check
     about:
       home: https://github.com/googleapis/python-api-core
-      license: Apache 2.0
+      license: Apache-2.0
       license_family: APACHE
       summary: Core Library for Google Client Libraries with grpcio-gcp
 
@@ -97,10 +112,15 @@ outputs:
       run:
         - {{ pin_subpackage(name + '-grpcio-gcp', min_pin='x.x', max_pin='x.x') }}
     test:
+      requires:
+        - python
+        - pip
       imports:
         - google.api_core
         - grpc
         - grpc_gcp
+      commands:
+        - python -m pip check
     about:
       home: https://github.com/googleapis/python-api-core
       license: Apache-2.0
