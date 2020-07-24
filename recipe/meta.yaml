@@ -10,7 +10,7 @@ source:
   sha256: 6b757736bbc699db858794e9b71e2bbf17996075773a40551ef5e6b0fad2a2f9
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -21,7 +21,7 @@ requirements:
 outputs:
   - name: {{ name }}
     build:
-      script: {{ PYTHON }} -m pip install . -vv
+      script: {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
         - python
