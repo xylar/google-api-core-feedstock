@@ -11,6 +11,7 @@ source:
 
 build:
   number: 0
+  noarch: python
 
 requirements:
   host:
@@ -21,6 +22,7 @@ requirements:
 outputs:
   - name: {{ name }}
     build:
+      noarch: python
       script: {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
@@ -28,13 +30,13 @@ outputs:
         - pip
       run:
         - python
-        - google-auth >=1.21.1,<2.0dev
         - googleapis-common-protos >=1.6.0,<2.0dev
         - protobuf >=3.12.0
-        - pytz
+        - google-auth >=1.21.1,<2.0dev
         - requests >=2.18.0,<3.0.0dev
         - setuptools >=34.0.0
-        - six >=1.10.0
+        - six >=1.13.0
+        - pytz
     test:
       requires:
         - python
