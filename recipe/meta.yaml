@@ -1,5 +1,5 @@
 {% set name = "google-api-core" %}
-{% set version = "1.22.2" %}
+{% set version = "1.22.3" %}
 
 package:
   name: {{ name|lower }}-split
@@ -7,10 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 779107f17e0fef8169c5239d56a8fbff03f9f72a3893c0c9e5842ec29dfedd54
+  sha256: 1166371f6b1164a30cfed26092e3679450bb837a2b425779c8d1dd140c0732f4
 
 build:
   number: 0
+  noarch: python
 
 requirements:
   host:
@@ -21,6 +22,7 @@ requirements:
 outputs:
   - name: {{ name }}
     build:
+      noarch: python
       script: {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
@@ -28,13 +30,13 @@ outputs:
         - pip
       run:
         - python
-        - google-auth >=1.21.1,<2.0dev
         - googleapis-common-protos >=1.6.0,<2.0dev
         - protobuf >=3.12.0
-        - pytz
+        - google-auth >=1.21.1,<2.0dev
         - requests >=2.18.0,<3.0.0dev
         - setuptools >=34.0.0
-        - six >=1.10.0
+        - six >=1.13.0
+        - pytz
     test:
       requires:
         - python
