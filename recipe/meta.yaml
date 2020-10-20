@@ -37,6 +37,8 @@ outputs:
         - setuptools >=34.0.0
         - six >=1.13.0
         - pytz
+        # Workaround for https://github.com/conda-forge/aiohttp-feedstock/issues/43
+        - yarl<1.6.0,>=1.0
     test:
       requires:
         - python
