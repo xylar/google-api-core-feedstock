@@ -5,9 +5,13 @@ Home: https://github.com/googleapis/python-api-core
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/google-api-core-feedstock/blob/master/LICENSE.txt)
 
 Summary: Core Library for Google Client Libraries
+
+Development: https://github.com/googleapis/python-api-core
+
+Documentation: https://googleapis.dev/python/google-api-core/latest/index.html
 
 Core Library for Google Client Libraries
 -------------------------
