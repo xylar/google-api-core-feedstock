@@ -63,6 +63,7 @@ Installing `google-api-core` from the `conda-forge` channel can be achieved by a
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `google-api-core, google-api-core-grpc, google-api-core-grpcgcp, google-api-core-grpcio-gcp` can be installed with:
