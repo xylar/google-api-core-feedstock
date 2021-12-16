@@ -10,7 +10,7 @@ source:
   sha256: 97349cc18c2bb2415f64f1353a80273a289a61294ce3eb2f7ce682d251bdd997
 
 build:
-  number: 0
+  number: 1
   noarch: python
 
 outputs:
@@ -60,6 +60,7 @@ outputs:
       run:
         - {{ pin_subpackage(name, exact=True) }}
         - grpcio >=1.33.2,<2.0dev
+        - grpcio-status >=1.33.2,<2.0dev
     test:
       requires:
         - pip
