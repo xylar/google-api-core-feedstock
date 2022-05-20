@@ -1,5 +1,5 @@
 {% set name = "google-api-core" %}
-{% set version = "2.7.1" %}
+{% set version = "2.7.3" %}
 
 package:
   name: {{ name|lower }}-split
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b0fa577e512f0c8e063386b974718b8614586a798c5894ed34bedf256d9dae24
+  sha256: 17957f0704cbe95bd2ce25019efd2046423978594d181d4263e5dcffd2dbbc79
 
 build:
   number: 0
@@ -79,7 +79,7 @@ outputs:
     requirements:
       run:
         - {{ pin_subpackage(name, exact=True) }}
-        - grpcio-gcp
+        - grpcio-gcp >=0.2.2
     test:
       requires:
         - pip
