@@ -171,7 +171,6 @@ Feedstock Maintainers
 =====================
 
 * [@BrentDorsey](https://github.com/BrentDorsey/)
-* [@leahecole](https://github.com/leahecole/)
 * [@parthea](https://github.com/parthea/)
 * [@tpdownes](https://github.com/tpdownes/)
 * [@tswast](https://github.com/tswast/)

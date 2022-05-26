@@ -10,7 +10,7 @@ source:
   sha256: 065bb8e11c605fd232707ae50963dc1c8af5b3c95b4568887515985e6c1156b3
 
 build:
-  number: 0
+  number: 1
   noarch: python
 
 outputs:
@@ -148,7 +148,6 @@ extra:
   feedstock-name: google-api-core
   recipe-maintainers:
     - BrentDorsey
-    - leahecole
     - parthea
     - tpdownes
     - tswast
