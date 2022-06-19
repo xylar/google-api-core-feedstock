@@ -53,8 +53,6 @@ Current release info
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-google--api--core-green.svg)](https://anaconda.org/conda-forge/google-api-core) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/google-api-core.svg)](https://anaconda.org/conda-forge/google-api-core) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/google-api-core.svg)](https://anaconda.org/conda-forge/google-api-core) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/google-api-core.svg)](https://anaconda.org/conda-forge/google-api-core) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-google--api--core--grpc-green.svg)](https://anaconda.org/conda-forge/google-api-core-grpc) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/google-api-core-grpc.svg)](https://anaconda.org/conda-forge/google-api-core-grpc) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/google-api-core-grpc.svg)](https://anaconda.org/conda-forge/google-api-core-grpc) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/google-api-core-grpc.svg)](https://anaconda.org/conda-forge/google-api-core-grpc) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-google--api--core--grpcgcp-green.svg)](https://anaconda.org/conda-forge/google-api-core-grpcgcp) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/google-api-core-grpcgcp.svg)](https://anaconda.org/conda-forge/google-api-core-grpcgcp) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/google-api-core-grpcgcp.svg)](https://anaconda.org/conda-forge/google-api-core-grpcgcp) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/google-api-core-grpcgcp.svg)](https://anaconda.org/conda-forge/google-api-core-grpcgcp) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-google--api--core--grpcio--gcp-green.svg)](https://anaconda.org/conda-forge/google-api-core-grpcio-gcp) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/google-api-core-grpcio-gcp.svg)](https://anaconda.org/conda-forge/google-api-core-grpcio-gcp) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/google-api-core-grpcio-gcp.svg)](https://anaconda.org/conda-forge/google-api-core-grpcio-gcp) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/google-api-core-grpcio-gcp.svg)](https://anaconda.org/conda-forge/google-api-core-grpcio-gcp) |
 
 Installing google-api-core
 ==========================
@@ -66,16 +64,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `google-api-core, google-api-core-grpc, google-api-core-grpcgcp, google-api-core-grpcio-gcp` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `google-api-core, google-api-core-grpc` can be installed with `conda`:
 
 ```
-conda install google-api-core google-api-core-grpc google-api-core-grpcgcp google-api-core-grpcio-gcp
+conda install google-api-core google-api-core-grpc
 ```
 
 or with `mamba`:
 
 ```
-mamba install google-api-core google-api-core-grpc google-api-core-grpcgcp google-api-core-grpcio-gcp
+mamba install google-api-core google-api-core-grpc
 ```
 
 It is possible to list all of the versions of `google-api-core` available on your platform with `conda`:
