@@ -25,7 +25,7 @@ outputs:
       run:
         - python >=3.6
         - googleapis-common-protos >=1.56.2,<2.0dev
-        - protobuf >=3.15.0,<4.0.0dev
+        - protobuf >=3.15.0,<5.0.0dev
         - google-auth >=1.25.0,<3.0dev
         - requests >=2.18.0,<3.0.0dev
     test:
@@ -72,48 +72,6 @@ outputs:
       license: Apache-2.0
       license_family: APACHE
       summary: Core Library for Google Client Libraries with grpc
-
-  - name: {{ name }}-grpcio-gcp
-    build:
-      noarch: generic
-    requirements:
-      run:
-        - {{ pin_subpackage(name, exact=True) }}
-        - grpcio-gcp >=0.2.2,<1.0dev
-    test:
-      requires:
-        - pip
-      imports:
-        - google.api_core
-        - grpc
-      commands:
-        - python -m pip check
-    about:
-      home: https://github.com/googleapis/python-api-core
-      license: Apache-2.0
-      license_family: APACHE
-      summary: Core Library for Google Client Libraries with grpcio-gcp
-
-  - name: {{ name }}-grpcgcp
-    build:
-      noarch: generic
-    requirements:
-      run:
-        - {{ pin_subpackage(name + '-grpcio-gcp', exact=True) }}
-    test:
-      requires:
-        - pip
-      imports:
-        - google.api_core
-        - grpc
-        - grpc_gcp
-      commands:
-        - python -m pip check
-    about:
-      home: https://github.com/googleapis/python-api-core
-      license: Apache-2.0
-      license_family: APACHE
-      summary: Core Library for Google Client Libraries with grpcio-gcp
 
 about:
   home: https://github.com/googleapis/python-api-core
