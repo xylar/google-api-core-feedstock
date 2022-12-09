@@ -22,16 +22,6 @@ This library is not meant to stand-alone. Instead it defines
 common helpers used by all Google API clients. For more information, see the
 [documentation](https://googleapis.dev/python/google-api-core/latest/index.html).
 
-Supported Python Versions
--------------------------
-Python >= 3.5
-
-Deprecated Python Versions
---------------------------
-Python == 2.7
-- Python 2.7 support will be removed on January 1, 2020.
-- protobuf does not support Visual C++ 2008, windows py27 package not available
-
 
 Current build status
 ====================
@@ -66,23 +56,49 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `google-api-core, google-api-core-grpc, google-api-core-grpcgcp, google-api-core-grpcio-gcp` can be installed with:
+Once the `conda-forge` channel has been enabled, `google-api-core, google-api-core-grpc, google-api-core-grpcgcp, google-api-core-grpcio-gcp` can be installed with `conda`:
 
 ```
 conda install google-api-core google-api-core-grpc google-api-core-grpcgcp google-api-core-grpcio-gcp
 ```
 
-It is possible to list all of the versions of `google-api-core` available on your platform with:
+or with `mamba`:
+
+```
+mamba install google-api-core google-api-core-grpc google-api-core-grpcgcp google-api-core-grpcio-gcp
+```
+
+It is possible to list all of the versions of `google-api-core` available on your platform with `conda`:
 
 ```
 conda search google-api-core --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search google-api-core --channel conda-forge
+```
+
+Alternatively, `mamba repoquery` may provide more information:
+
+```
+# Search all versions available on your platform:
+mamba repoquery search google-api-core --channel conda-forge
+
+# List packages depending on `google-api-core`:
+mamba repoquery whoneeds google-api-core --channel conda-forge
+
+# List dependencies of `google-api-core`:
+mamba repoquery depends google-api-core --channel conda-forge
 ```
 
 
 About conda-forge
 =================
 
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+[![Powered by
+NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
@@ -92,10 +108,12 @@ for each of the installable packages. Such a repository is known as a *feedstock
 A feedstock is made up of a conda recipe (the instructions on what and how to build
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
-[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/)
-and [TravisCI](https://travis-ci.com/) it is possible to build and upload installable
-packages to the [conda-forge](https://anaconda.org/conda-forge)
-[Anaconda-Cloud](https://anaconda.org/) channel for Linux, Windows and OSX respectively.
+[Azure](https://azure.microsoft.com/en-us/services/devops/), [GitHub](https://github.com/),
+[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
+[Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
+it is possible to build and upload installable packages to the
+[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
@@ -143,7 +161,6 @@ Feedstock Maintainers
 =====================
 
 * [@BrentDorsey](https://github.com/BrentDorsey/)
-* [@leahecole](https://github.com/leahecole/)
 * [@parthea](https://github.com/parthea/)
 * [@tswast](https://github.com/tswast/)
 
